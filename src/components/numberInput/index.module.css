@@ -1,0 +1,18 @@
+.numberInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.errorWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.error {
+  position: absolute;
+  top: -1rem;
+  color: red;
+  font-size: 14px;
+  white-space: nowrap;
+}
