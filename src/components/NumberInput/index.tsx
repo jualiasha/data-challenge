@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
-import Button from '../button';
-import Input from '../input';
+import Button from '../Button';
+import Input from '../Input';
 import styles from './index.module.css';
 import { sliderRangeIndexes } from '../../common/consts.ts';
 
@@ -19,6 +19,8 @@ const NumberInput: FC<NumberInputProps> = ({
 }) => {
   const [error, setError] = useState('');
 
+  // handles value change
+  // Validate Input range and set error messages accordingly
   const handleChange = (newValue: number) => {
     const min = range[sliderRangeIndexes.minRange];
     const max = range[sliderRangeIndexes.maxRange];

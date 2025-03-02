@@ -1,18 +1,21 @@
-import Button from './components/button';
+import Button from './components/Button';
 import { FiShoppingCart } from 'react-icons/fi';
 import styles from './app.module.css';
 import { useState } from 'react';
-import NumberInput from './components/numberInput';
-import Slider from './components/slider';
+import NumberInput from './components/NumberInput';
+import Slider from './components/Slider';
 
 function App() {
+  // State to hold the numeric value controlled by both the Slider and Input
   const [number, setNumber] = useState(50);
+  // Min and max range for the number Input and Slider
   const sliderRange = [0, 100];
 
+  // Handles form submission and alerts the selected number
   const handleSubmit = () => {
     alert(`Submitted Value: ${number}`);
   };
-
+  // Resets the form values to default
   const handleClear = () => {
     setNumber(50);
   };
