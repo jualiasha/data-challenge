@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
 import NumberInput from "../src/components/numberInput";
-
 describe("NumberInput Component", () => {
   it("renders with initial value", () => {
     render(<NumberInput value={50} onChange={() => {}} range={[0, 100]} />);
