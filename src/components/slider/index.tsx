@@ -18,6 +18,7 @@ interface SliderProps {
 const Slider: FC<SliderProps> = ({ value, range, onChange }) => {
   return (
     <AriaSlider
+      data-testid={'slider'}
       className={styles.slider}
       value={value}
       onChange={onChange}

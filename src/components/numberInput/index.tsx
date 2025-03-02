@@ -60,7 +60,11 @@ const NumberInput: FC<NumberInputProps> = ({
         </Button>
       </div>
       <div className={styles.errorWrapper}>
-        {error && <span className={styles.error}>{error}</span>}
+        {error && (
+          <span data-testid={'error-message'} className={styles.error}>
+            {error}
+          </span>
+        )}
       </div>
     </>
   );

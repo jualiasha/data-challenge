@@ -11,6 +11,7 @@ interface InputProps {
 const Input: FC<InputProps> = ({ disabled, value, onChange }) => {
   return (
     <AriaInput
+      data-testid={'input'}
       className={`${styles.input} ${disabled ? styles.disabled : ''}`}
       disabled={disabled}
       value={value}

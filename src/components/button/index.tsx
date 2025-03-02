@@ -7,9 +7,9 @@ type ButtonVariant = 'contained' | 'outlined';
 type ButtonTheme = 'primary' | 'secondary';
 
 interface ButtonProps {
-  size: ButtonSize;
-  variant: ButtonVariant;
-  theme: ButtonTheme;
+  size?: ButtonSize;
+  variant?: ButtonVariant;
+  theme?: ButtonTheme;
   disabled?: boolean;
   icon?: React.ReactNode; // SVG Icon support
   children?: React.ReactNode; // Text content
