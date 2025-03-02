@@ -27,9 +27,11 @@ const Slider: FC<SliderProps> = ({ value, range, onChange }) => {
     >
       <Label></Label>
       <SliderTrack className={styles.sliderTrack}>
-        <SliderThumb className={styles.sliderThumb} />
+        {/* Move the output (value) above the thumb */}
+        <SliderThumb className={styles.sliderThumb}>
+          <SliderOutput className={styles.sliderOutput}>{value}</SliderOutput>
+        </SliderThumb>
       </SliderTrack>
-      <SliderOutput className={styles.sliderOutput}>{value}</SliderOutput>
     </AriaSlider>
   );
 };
