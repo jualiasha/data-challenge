@@ -8,6 +8,7 @@ import Slider from './components/Slider';
 function App() {
   // State to hold the numeric value controlled by both the Slider and Input
   const [number, setNumber] = useState(50);
+  const [error, setError] = useState('');
   // Min and max range for the number Input and Slider
   const sliderRange = [0, 100];
 
@@ -25,7 +26,12 @@ function App() {
       <div className={styles.form}>
         <h2>Slider Play</h2>
         <Slider value={number} range={sliderRange} onChange={setNumber} />
-        <NumberInput value={number} onChange={setNumber} range={sliderRange} />
+        <NumberInput
+          value={number}
+          onChange={setNumber}
+          onError={setError}
+          range={sliderRange}
+        />
         <div className={styles.actions}>
           <Button
             size="medium"
@@ -39,6 +45,7 @@ function App() {
             size="medium"
             variant="contained"
             theme="primary"
+            disabled={error.length > 0}
             onPress={handleSubmit}
           >
             Submit
