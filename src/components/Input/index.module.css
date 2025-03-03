@@ -1,6 +1,6 @@
 .input {
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 0.06rem solid #ccc;
   border-radius: 0.3125rem;
 }
 .input:focus {
