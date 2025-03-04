@@ -4,15 +4,4 @@
   justify-content: center;
   gap: 0.625rem;
 }
-.errorWrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.error {
-  position: absolute;
-  top: -1rem;
-  color: red;
-  font-size: 0.875rem;
-  white-space: nowrap;
-}
+

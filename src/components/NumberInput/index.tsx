@@ -45,40 +45,32 @@ const NumberInput: FC<NumberInputProps> = ({
     onChange(newValue);
   };
   return (
-    <>
-      <div className={styles.numberInput}>
-        <Button
-          size="small"
-          variant="contained"
-          theme="primary"
-          onPress={() => handleChange(value - 1)}
-          disabled={disabled}
-        >
-          -
-        </Button>
-        <Input
-          value={value.toString()}
-          onChange={(value) => handleChange(Number(value))}
-          disabled={disabled}
-        />
-        <Button
-          size="small"
-          variant="contained"
-          theme="primary"
-          onPress={() => handleChange(value + 1)}
-          disabled={disabled}
-        >
-          +
-        </Button>
-      </div>
-      <div className={styles.errorWrapper}>
-        {error && (
-          <span data-testid={'error-message'} className={styles.error}>
-            {error}
-          </span>
-        )}
-      </div>
-    </>
+    <div className={styles.numberInput}>
+      <Button
+        size="small"
+        variant="contained"
+        theme="primary"
+        onPress={() => handleChange(value - 1)}
+        disabled={disabled}
+      >
+        -
+      </Button>
+      <Input
+        value={value.toString()}
+        onChange={(value) => handleChange(Number(value))}
+        disabled={disabled}
+        error={error}
+      />
+      <Button
+        size="small"
+        variant="contained"
+        theme="primary"
+        onPress={() => handleChange(value + 1)}
+        disabled={disabled}
+      >
+        +
+      </Button>
+    </div>
   );
 };
 
